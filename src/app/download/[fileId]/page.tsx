@@ -10,7 +10,6 @@ async function DownloadPage({ params }: { params: { fileId: string } }) {
   const { size, userEmail, fileType, shortUrl, createdAt, password, Url } = JSON.parse(
     JSON.stringify(fileDetails)
   )
-  console.log({ size, userEmail, fileType, shortUrl, password, Url })
 
   return (
     <DownloadPreview

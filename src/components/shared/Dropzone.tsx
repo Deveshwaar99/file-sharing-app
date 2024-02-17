@@ -31,7 +31,6 @@ export default function Dropzone({ setFiles }: DropzoneProps) {
   }
 
   const handleFiles = (files: FileList) => {
-    // console.log(files)
     const newFiles = Array.from(files).map(file => ({ id: uuidv4(), file }))
     setFiles(prev => [...prev, ...newFiles])
   }

@@ -41,7 +41,7 @@ export async function uploadFilesToStorage(
       },
       async () => {
         const downloadURL = await getDownloadURL(uploadTask.snapshot.ref)
-        console.log('File uploaded and available at:', downloadURL)
+
         uploadInfoToDb({ fileId, size, type, downloadURL })
       }
     )

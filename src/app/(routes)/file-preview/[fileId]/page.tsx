@@ -12,7 +12,6 @@ async function FilePreview({ params }: { params: { fileId: string } }) {
   const fileDetails = await getFileDetails(fileId)
   if (!fileDetails) notFound()
   const { size, userEmail, fileType, shortUrl, createdAt } = JSON.parse(JSON.stringify(fileDetails))
-  console.log({ size, userEmail, fileType, shortUrl })
 
   const { userId } = auth()
   const user = await clerkClient.users.getUser(userId!)
