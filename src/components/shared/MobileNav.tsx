@@ -1,5 +1,6 @@
+import Link from 'next/link'
+//ui
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-
 import Image from 'next/image'
 import logoImg from '../../../public/image/logo.png'
 import NavItems from './NavItems'
@@ -12,17 +13,19 @@ function MobileNav() {
         <Button variant="outline">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
-            strokeWidth={1.5}
+            fill="none"
             stroke="currentColor"
-            className="w-6 h-6"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-align-right"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
+            <line x1="21" x2="3" y1="6" y2="6" />
+            <line x1="21" x2="9" y1="12" y2="12" />
+            <line x1="21" x2="7" y1="18" y2="18" />
           </svg>
         </Button>
       </SheetTrigger>
@@ -31,7 +34,9 @@ function MobileNav() {
         <Separator className="my-5" />
         <NavItems />
         <div className="hidden w-full mx-auto my-8 sm:flex">
-          <Button className="flex-1 bg-indigo-500 rounded-full ">Register</Button>
+          <Link href="/sign-up">
+            <Button className="flex-1 bg-indigo-500 rounded-full ">Register</Button>
+          </Link>
         </div>
       </SheetContent>
     </Sheet>
