@@ -11,7 +11,6 @@ async function Files() {
   if (!email) notFound()
 
   const fileList = await getUserFiles(email)
-  console.log(fileList)
 
   return (
     <div className="overflow-x-auto md:my-10 sm:my-4 w-auto mx-auto ">
@@ -44,7 +43,6 @@ async function Files() {
                 </tr>
               )
             })}
-            ) )
           </tbody>
         </table>
       ) : (

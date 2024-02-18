@@ -34,9 +34,12 @@ function EmailInput({ fileType, createdAt, fileName, downloadUrl, userName }: Em
       userName,
       reciever: email!,
     })
-    toast('Email sent with the speed of light (well, almost)! ⚡', {
-      description: getFormattedDateTime(),
-    })
+    toast(
+      '🚀 Incoming email at light speed (almost)! ⚡ Keep an eye on your inbox, and watch out for the spam trap! 📩✨',
+      {
+        description: getFormattedDateTime(),
+      }
+    )
   }
 
   return (
