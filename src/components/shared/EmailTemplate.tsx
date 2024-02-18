@@ -38,12 +38,12 @@ export const EmailTemplate = ({
       <Body style={main}>
         <Container>
           <Section style={logo}>
-            <Img src={`${baseUrl}/image/logo.png`} />
+            <Img src={`${baseUrl}/image/logo.png`} width={20} height={20} />
           </Section>
 
           <Section style={content}>
             <Row>
-              <Img style={image} width={620} src={`${baseUrl}/image/zip.png`} />
+              <Img style={image} width={25} height={25} src={`${baseUrl}/image/zip.png`} />
             </Row>
 
             <Row style={{ ...boxInfos, paddingBottom: '0' }}>
