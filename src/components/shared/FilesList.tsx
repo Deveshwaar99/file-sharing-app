@@ -17,7 +17,7 @@ function FilesList({ files, setFiles }: FilesListProps) {
   return (
     <div className="px-4 md:px-8">
       <div className="overflow-x-auto">
-        <table className="w-full text-sm bg-white divide-y-2 divide-gray-200">
+        <table className="w-full text-sm  bg-transparent divide-y-2 divide-gray-200">
           <thead className="ltr:text-left rtl:text-right">
             <tr>
               <th className="px-2 md:px-4 py-2 font-medium text-gray-900 whitespace-nowrap">No</th>

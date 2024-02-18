@@ -7,12 +7,14 @@ export async function POST(req: Request) {
   const body = await req.json()
 
   const { fileName, fileType, createdAt, downloadUrl, userName, reciever } = body
+  console.log(body)
+
   try {
     const data = await resend.emails.send({
       from: 'Sharewave <onboarding@resend.dev>',
-      to: ['deveshwaar99@gmail.com'],
-      subject: 'Hello world',
-      text: 'Hello World',
+      to: [`${reciever}`],
+      subject: 'Sharewave file share',
+      text: 'Sharewave file share',
       // react: EmailTemplate({ firstName: 'John' }),
       react: EmailTemplate({
         fileName,

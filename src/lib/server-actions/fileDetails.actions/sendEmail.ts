@@ -39,7 +39,6 @@ export async function sendEmail({
     if (!response.ok) {
       throw new Error(`Error: ${response.status}`)
     }
-
     // Handle successful response here
   } catch (error) {
     // Handle errors gracefully

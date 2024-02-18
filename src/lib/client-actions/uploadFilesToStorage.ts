@@ -17,8 +17,10 @@ export async function uploadFilesToStorage(
   try {
     const zippedFiles = await compressFiles(files, fileId)
     const { type, size } = zippedFiles
+    console.log('files zipped--', zippedFiles)
 
     const storage = getStorage(app)
+    console.log('got the app', app)
     const metadata = {
       contentType: '	application/x-zip-compressed',
     }

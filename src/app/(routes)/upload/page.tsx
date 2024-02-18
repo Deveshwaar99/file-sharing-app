@@ -17,14 +17,28 @@ import { getFormattedDateTime } from '@/lib/utils'
 function Upload() {
   const [files, setFiles] = useState<FileType[]>([])
   const [progress, setProgress] = useState(0)
+  const [isUploading, setIsUploading] = useState(false)
 
   const handleUploadFiles = async () => {
-    await uploadFilesToStorage(files, uuidv4(), setProgress)
+    setIsUploading(true)
+
+    try {
+      await uploadFilesToStorage(files, uuidv4(), setProgress)
+    } catch (error) {
+      toast('🚫 Whoops! Upload error detected! 🔄 Retry, please! 📂', {
+        description: getFormattedDateTime(),
+      })
+    } finally {
+      setIsUploading(false)
+      setProgress(0)
+    }
   }
+
   if (progress === 100) {
-    toast('🎊 Files have been uploaded', {
+    toast('🎊 Files have been uploaded - Redirecting to Our Preview Page! 🚀 Lets Go! 🌟  ', {
       description: getFormattedDateTime(),
     })
+
     setProgress(0)
   }
   return (
@@ -38,7 +52,7 @@ function Upload() {
       ></div>
 
       <div className="flex flex-col text-center items-center">
-        <h1 className="text-3xl my-7">Upload</h1>
+        <h1 className="text-3xl my-1">Upload</h1>
         <div className=" w-full ">
           <Dropzone setFiles={setFiles} />
         </div>
@@ -51,7 +65,7 @@ function Upload() {
             disabled={!files.length}
             className=" bg-my-custom-purple w-3/5 rounded-2xl"
           >
-            Upload
+            {isUploading ? 'Uploading...' : 'Upload'}
           </Button>
         ) : (
           <Progress progress={progress} />

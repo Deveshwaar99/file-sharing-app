@@ -46,7 +46,7 @@ function EmailInput({ fileType, createdAt, fileName, downloadUrl, userName }: Em
         <input
           type="email"
           placeholder="example@email.com"
-          className=" w-auto py-2 pl-3 pr-12 text-gray-500 bg-transparent border border-gray-300 rounded-lg shadow-sm outline-none bg-violet-50 focus:border-indigo-600"
+          className=" accent-violet-400 w-auto py-2 pl-3 pr-12 text-gray-500 bg-transparent border border-gray-300 rounded-lg shadow-sm outline-none bg-violet-50 focus:border-indigo-600"
           value={email}
           onChange={e => setEmail(e.target.value)}
         />

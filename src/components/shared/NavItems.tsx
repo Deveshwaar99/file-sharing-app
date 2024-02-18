@@ -3,13 +3,12 @@ import React from 'react'
 
 function NavItems() {
   const navigation = [
-    { title: 'Features', path: '/' },
-    { title: 'Integrations', path: '/' },
-    { title: 'Customers', path: '/' },
-    { title: 'Pricing', path: '/' },
+    { title: 'Upload', path: '/upload' },
+    { title: 'My files', path: '/files' },
+    { title: 'About', path: '/' },
   ]
   return (
-    <ul className="flex flex-col space-y-6 items-left md:flex-row md:space-x-6 md:space-y-0">
+    <ul className="flex flex-col space-y-8 items-left md:flex-row md:space-x-6 md:space-y-0">
       {navigation.map((item, idx) => {
         return (
           <li key={idx} className="text-gray-700 hover:text-indigo-500 ">

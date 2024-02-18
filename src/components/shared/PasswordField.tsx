@@ -55,7 +55,7 @@ function PasswordField({ password, setPassword }: PasswordFieldProps) {
         <input
           type={isPasswordHidden ? 'password' : 'text'}
           placeholder="Enter your password"
-          className="py-2 pl-3 pr-12 text-gray-500 bg-transparent border border-gray-300 rounded-lg shadow-sm outline-none bg-violet-50 focus:border-indigo-600"
+          className=" accent-violet-400 py-2 pl-3 pr-12 text-gray-500 bg-transparent border border-gray-300 rounded-lg shadow-sm outline-none bg-violet-50 focus:border-indigo-600"
           value={password}
           onChange={e => setPassword(e.target.value)}
         />
