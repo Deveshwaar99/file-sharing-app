@@ -37,15 +37,10 @@ export const EmailTemplate = ({
       <Preview>Sharewave file share</Preview>
       <Body style={main}>
         <Container>
-          <Section style={logo}>
-            <Img src={`${baseUrl}/image/logo.png`} width={20} height={20} />
-          </Section>
-
           <Section style={content}>
-            <Row>
-              <Img style={image} width={25} height={25} src={`${baseUrl}/image/zip.png`} />
-            </Row>
-
+            <Section style={logo}>
+              <Img src={`${baseUrl}/image/logo.png`} width={300} height={100} />
+            </Section>
             <Row style={{ ...boxInfos, paddingBottom: '0' }}>
               <Column>
                 <Heading
@@ -69,19 +64,19 @@ export const EmailTemplate = ({
                 </Heading>
 
                 <Text style={paragraph}>
-                  <b>Name: </b>
+                  <b>Name:{'  '}</b>
                   {fileName}
                 </Text>
                 <Text style={{ ...paragraph, marginTop: -5 }}>
-                  <b>Type:</b>
-                  {fileType}
+                  <b>Type:{'  '}</b>
+                  {fileType.toLocaleUpperCase()}
                 </Text>
                 <Text style={{ ...paragraph, marginTop: -5 }}>
-                  <b>Created At: </b>
+                  <b>Created At:{'  '} </b>
                   {createdAt}
                 </Text>
                 <Text style={{ ...paragraph, marginTop: -5 }}>
-                  <b>Url: </b>
+                  <b>Url:{'  '} </b>
                   {downloadUrl}
                 </Text>
 

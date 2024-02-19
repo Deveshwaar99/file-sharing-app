@@ -7,6 +7,7 @@ export async function POST(req: Request) {
   const body = await req.json()
 
   const { fileName, fileType, createdAt, downloadUrl, userName, reciever } = body
+  console.log(reciever)
 
   try {
     const data = await resend.emails.send({
