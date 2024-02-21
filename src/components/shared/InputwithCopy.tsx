@@ -14,10 +14,10 @@ function InputwithCopy({ text }: { text: string }) {
 
   return (
     <div>
-      <div className="my-2 text-md text-slate-500 ">Url</div>
-      <div className="flex flex-row items-center justify-between py-2 border border-gray-300 rounded-md shadow-sm w-fit bg-violet-50 sm:text-sm">
+      <div className="text-md my-2 text-slate-500">Url</div>
+      <div className="flex w-fit flex-row items-center justify-between rounded-md border border-gray-300 bg-violet-50 py-2 shadow-sm sm:text-sm">
         <p className="px-2">{text}</p>
-        <span className="px-3 ">
+        <span className="px-3">
           <button
             type="button"
             className="text-gray-600 hover:text-gray-700"
@@ -41,7 +41,6 @@ function InputwithCopy({ text }: { text: string }) {
           </button>
         </span>
       </div>
-      <Toaster />
     </div>
   )
 }

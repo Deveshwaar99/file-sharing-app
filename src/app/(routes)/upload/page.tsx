@@ -44,16 +44,16 @@ function Upload() {
   return (
     <div className="relative">
       <div
-        className="absolute inset-0 h-full pointer-events-none blur-xl "
+        className="pointer-events-none absolute inset-0 h-full blur-xl"
         style={{
           background:
             'linear-gradient(143.6deg, rgba(192, 132, 252, 0) 20.79%, rgba(232, 121, 249, 0.26) 40.92%, rgba(204, 171, 238, 0) 70.35%)',
         }}
       ></div>
 
-      <div className="flex flex-col text-center items-center">
-        <h1 className="text-3xl my-1">Upload</h1>
-        <div className=" w-full ">
+      <div className="flex flex-col items-center text-center">
+        <h1 className="my-1 text-3xl">Upload</h1>
+        <div className="w-full">
           <Dropzone setFiles={setFiles} />
         </div>
 
@@ -63,14 +63,13 @@ function Upload() {
           <Button
             onClick={() => handleUploadFiles()}
             disabled={!files.length}
-            className=" bg-my-custom-purple w-3/5 rounded-2xl"
+            className="w-3/5 rounded-2xl bg-my-custom-purple"
           >
             {isUploading ? 'Uploading...' : 'Upload'}
           </Button>
         ) : (
           <Progress progress={progress} />
         )}
-        <Toaster />
       </div>
     </div>
   )

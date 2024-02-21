@@ -45,11 +45,11 @@ function EmailInput({ fileType, createdAt, fileName, downloadUrl, userName }: Em
   return (
     <div>
       <label className="text-md text-slate-500">Send download link to email</label>
-      <div className="flex flex-row w-full gap-2 py-2 ">
+      <div className="flex w-full flex-row gap-2 py-2">
         <input
           type="email"
           placeholder="example@email.com"
-          className=" accent-violet-400 w-auto py-2 pl-3 pr-12 text-gray-500 bg-transparent border border-gray-300 rounded-lg shadow-sm outline-none bg-violet-50 focus:border-indigo-600"
+          className="w-auto rounded-lg border border-gray-300 bg-transparent bg-violet-50 py-2 pl-3 pr-12 text-gray-500 accent-violet-400 shadow-sm outline-none focus:border-indigo-600"
           value={email}
           onChange={e => setEmail(e.target.value)}
         />
@@ -57,13 +57,13 @@ function EmailInput({ fileType, createdAt, fileName, downloadUrl, userName }: Em
         <Button
           disabled={disableButton}
           onClick={() => handleSendEmail()}
-          className=" bg-violet-500"
+          className="bg-violet-500"
         >
           Send
         </Button>
       </div>
       {showError && (
-        <div className="flex ">
+        <div className="flex">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6 text-red-500"
@@ -76,12 +76,11 @@ function EmailInput({ fileType, createdAt, fileName, downloadUrl, userName }: Em
               clipRule="evenodd"
             />
           </svg>
-          <span className="text-red-600 font-semibold text-xs mt-1 mx-1">
+          <span className="mx-1 mt-1 text-xs font-semibold text-red-600">
             Invalid please enter a correct email.
           </span>
         </div>
       )}
-      <Toaster />
     </div>
   )
 }

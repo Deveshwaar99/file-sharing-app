@@ -26,17 +26,16 @@ function PasswordInput({ fileId }: { fileId: string }) {
   return (
     <div className="">
       <label className="text-md text-slate-500">Password</label>
-      <div className="flex flex-row w-full gap-2 py-2 ">
+      <div className="flex w-full flex-row gap-2 py-2">
         <PasswordField password={password} setPassword={setPassword} />
         <Button
           disabled={password === undefined || password.length < 3 || disableButton}
           onClick={() => handleAddPassword()}
-          className=" bg-violet-500"
+          className="bg-violet-500"
         >
           Add
         </Button>
       </div>
-      <Toaster />
     </div>
   )
 }
