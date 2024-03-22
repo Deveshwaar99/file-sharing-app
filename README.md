@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center" id="title">Spotify-Clone</h1>
 
-## Getting Started
+<p align="center"><img src="https://socialify.git.ci/Deveshwaar99/Spotify-clone/image?language=1&amp;owner=1&amp;name=1&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
 
-First, run the development server:
+<p id="description">Unleash your inner music maestro with this feature-rich Spotify clone! Upload your own tracks discover a library of songs and manage it all with playlists and favorites. Stripe integration ensures smooth payment processing while Tailwind CSS delivers a beautiful and responsive UI. Built with cutting-edge technologies like Next.js 14 Supabase and PostgreSQL this project offers a robust foundation for your next-level music streaming application. Dive in and explore the world of music!</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<h2>🚀 Demo</h2>
+
+[https://spotify-clone-phi-jade.vercel.app/](https://spotify-clone-phi-jade.vercel.app/)
+
+  
+  
+<h2>🧐 Features</h2>
+
+Here're some of the project's best features:
+
+*   This project allows users to upload their own songs.
+*   It integrates seamlessly with Stripe for payment processing.
+*   The user interface is polished and designed with Tailwind CSS.
+*   It is completely responsive and can be accessed from various devices.
+*   Secure authentication is implemented using Supabase and GitHub.
+*   Supabase storage is used for efficient file and image handling.
+*   Client-side form validation is done with react-hook-form.
+*   Server error management is handled with react-toast.
+*   The project includes audio playback functionality along with voice control and progressbar
+*   Users can manage their favorites and playlists.
+*   An advanced player component is implemented.
+*   Server React components directly access the database for data fetching.
+
+<h2>🛠️ Installation Steps:</h2>
+
+<p>1. Clone the repository</p>
+
+```
+git clone https://github.com/Deveshwaar99/Spotify-clone.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p>2. Install dependencies</p>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<p>3. Add env variables in .env.local file</p>
 
-## Learn More
+<p>4. Build the app</p>
 
-To learn more about Next.js, take a look at the following resources:
+```
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p>5. Start the app</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm run start
+```
 
-## Deploy on Vercel
+  
+  
+<h2>💻 Built with</h2>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Technologies used in the project:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+*   Next.js 14
+*   Tailwind CSS
+*   Radix UI
+*   Zustand
+*   React Hook Form
+*   Use Sound
+*   Supabase
+*   Stripe
+*   query-string
+*   react-hot-toast
+*   react-spinners
+*   zod
+*   TypeScript
